@@ -6,7 +6,15 @@
   <title>瑞鵬 & 貞吟 婚禮邀請函</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<script>
+  document.addEventListener('click', function() {
+    const audio = document.querySelector('.wedding-audio');
+    if (audio && audio.paused) {
+      audio.play();
+    }
+  }, { once: true });
+</script>
+  <body>
   <main class="invitation-card">
     <!-- 背景音樂區塊 -->
 <div style="margin: 20px 0;">
