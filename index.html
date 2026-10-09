@@ -25,6 +25,24 @@
 </div>
     <!-- 封面頂部與主圖 -->
     <header class="hero">
+      <!-- 置中音樂播放器與自動播放觸發器 -->
+<div style="text-align: center; margin: 25px 0;">
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 8px;">🎵 背景音樂</p>
+  <audio controls autoplay loop class="wedding-audio" style="outline: none;">
+    <source src="music.mp3" type="audio/mpeg">
+    您的瀏覽器不支援音樂播放。
+  </audio>
+</div>
+
+<!-- 點擊任意處自動播放音樂 -->
+<script>
+  document.addEventListener('click', function() {
+    const audio = document.querySelector('.wedding-audio');
+    if (audio && audio.paused) {
+      audio.play();
+    }
+  }, { once: true });
+</script>
       <p class="subtitle">WEDDING INVITATION</p>
       <h1>瑞鵬 & 貞吟</h1>
       <p class="date">2026 . 11 . 07</p>
